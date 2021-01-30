@@ -13,7 +13,7 @@ class Solution {
                 while(!q.isEmpty()) {
                     int pop = q.poll();
                     for (int a=0;a<total;a++) {
-                        if (isConnected[pop][a] == 1 && all[a]==0) {
+                        if (pop != a && isConnected[pop][a] == 1 && all[a]==0) {
                             q.offer(a);
                             all[a] = 1;
                         }
